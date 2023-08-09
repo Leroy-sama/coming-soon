@@ -1,20 +1,23 @@
-const form = document.querySelector('form')
-const input = document.querySelector('input')
+const form = document.querySelector('form');
+const input = document.getElementById('email');
+const errorMsg = document.querySelector('.error');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     checkEmail()
 })
 
-
 const checkEmail = (e) => {
     const email = input.value;
     if (!validateEmail(email)) {
         console.log('invalid');
-        input.classList.add('email-error')
+        input.style.borderColor = 'red';
+        errorMsg.textContent = 'Please provide a valid email address';
+
     }   else {
         console.log('valid');
-        input.classList.remove('email-error')
+        input.style.borderColor = '';
+        errorMsg.textContent = '';
     }
     console.log(email);
 }
