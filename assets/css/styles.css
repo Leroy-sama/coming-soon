@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --paleBlue: hsl(223, 100%, 88%);
+    --lightRed: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --veryDarkBlue: hsl(209, 33%, 12%);
+    --white: hsl(0, 0%, 100%);
+}
+
+img {
+    width: 100%;
+}
+
+.pingme {
+    padding-top: 5em;
+    margin: 0 1em;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pingme__image {
+    max-width: 100px;
+}
+
+.pingme__head {
+    color: var(--gray);
+    font-weight: 400;
+    text-align: center;
+    padding: 1.5em 0 0.75em;
+}
+
+.spantext {
+    color: var(--veryDarkBlue);
+    font-weight: 700;
+}
+
+.pingme__text {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--veryDarkBlue);
+}
+
+.form-control {
+    padding: 2em 0;
+    position: relative;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--blue);
+    outline: none;
+    border-radius: 30px;
+}
+
+.form-control input::placeholder {
+    color: var(--paleBlue);
+}
+
+.form-control.error input {
+    border: 1px solid var(--lightRed);
+    margin-bottom: 1em;
+}
+
+.form-control.error .error__text {
+    font-size: 0.8rem;
+    color: var(--lightRed);
+    font-style: italic;
+    position: absolute;
+    text-align: center;
+    left: 4em;
+
+    /* color: var(--lightRed);
+    font-style: italic;
+    position: absolute;
+    top: 70px;
+    font-size: 0.8rem;
+    margin-top: 2em;
+    text-align: center; */
+}
+
+.form-control button {
+    cursor: pointer;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    margin: 1em 0;
+    border-radius: 30px;
+}
+
+.form-control.error button {
+    margin-top: 3em;
+}
+
+.footer {
+    padding: 2em 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.icons i {
+    color: var(--blue);
+    border: 1px solid var(--paleBlue);
+    padding: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.footer__text {
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+@media (min-width: 35em) {
+    .pingme {
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    .pingme__head {
+        font-size: 2.5rem;
+        padding: 1em 0 0.5em;
+    }
+
+    .pingme__text {
+        font-size: 1.1rem;
+    }
+
+    .form-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .form-control button {
+        max-width: 200px;
+        /* padding: 1.5em; */
+        font-size: 1rem;
+    }
+
+    .form-control input {
+        font-size: 1rem;
+    }
+
+    .form-control.error input {
+        margin-bottom: 0;
+    }
+
+    .form-control.error .error__text {
+        left: 2em;
+        bottom: 1em;
+    }
+
+    .form-control.error button {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
